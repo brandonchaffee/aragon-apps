@@ -30,6 +30,12 @@ contract Voting is IForwarder, AragonApp {
 
     enum VoterState { Absent, Yea, Nay }
 
+    struct Democratics {
+        bool isQuorum;
+        bool isTimed;
+        bool isRatio;
+    }
+
     struct Vote {
         address creator;
         uint64 startDate;
